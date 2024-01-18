@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+        body {
+            background-color: greenyellow;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .text {
+            margin-bottom: 10px;
+            font-weight: bold;
+            font-size: 25px;
+        }
+
+        .form {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .form form {
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            background-color: green;
+            width: 25em;
+        }
+
+        .form form .inputs {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            margin: 20px 0px;
+        }
+
+        .form form .inputs .input {
+            margin: 5px 30px;
+            display: grid;
+            grid-template-columns: 0.3fr 1fr;
+        }
+
+        .form form .inputs .input .gen {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        }
+
+        .form form .inputs .input input {
+            margin-left: 1px;
+        }
+
+        .form form .inputs .btn {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            margin-top: 10px;
+        }
+
+        .form form .inputs .check {
+            justify-content: flex-start;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="text"><span>Don't have an account?! Want to Join us?!</span></div>
+        <div class="form">
+
+            <form action="#">
+                <div class="inputs">
+                    <div class="input">
+                        <label for="fname">First name </label>
+                        <input type="text" name="name" id="fname" placeholder="First name">
+                    </div>
+                    <div class="input">
+                        <label for="lname">Last name </label>
+                        <input type="text" name="name" id="lname" placeholder="Last name">
+                    </div>
+                    <div class="input">
+                        <label for="gen">Gender </label>
+                        <div class="gen">
+                            <input type="radio" name="name" id="gen">Male
+                            <input type="radio" name="name" id="gen">Female
+                            <input type="radio" name="name" id="gen">Other
+                        </div>
+                    </div>
+                    <div class="input">
+                        <label for="city">Select City</label>
+                        <select name="city" id="city">
+                            <option value="Noida">Noida</option>
+                            <option value="Mumbai">Mumbai</option>
+                            <option value="Delhi">Delhi</option>
+                            <option value="Ranchi">Ranchi</option>
+                            <option value="Phagwara">Phagwara</option>
+                        </select>
+                    </div>
+                    <div class="input address">
+                        <label>Address</label>
+                        <textarea name="Address" id="Address" cols="30" rows="3" placeholder="Address"></textarea>
+                    </div>
+                    <div class="input">
+                        <label for="pass">Password </label>
+                        <input type="password" name="password" id="password" placeholder="Password">
+                    </div>
+                    <div class="input">
+                        <label for="file">Select File </label>
+                        <input type="file" name="file" id="file">
+                    </div>
+                    <div class="input check">
+                        <input type="checkbox" name="cond" id="cond">
+                        <label for="cond">I agree to the terms and conditions </label>
+                    </div>
+                    <div class="input btn">
+                        <input type="button" name="submit" id="submit" value="Submit">
+                        <input type="reset" name="reset" id="reset" value="Reset">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

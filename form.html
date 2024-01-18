@@ -22,18 +22,16 @@
         .elm input{
             margin: 0 10px 10px;
             padding: 5px;
-            background: rgba(255, 255, 255, 0.8);
+            background: rgba(255, 255, 255, 0.1);
             border: none;
         }
         .elm label{
             margin-left: 10px;
             font-size: 12px;
         }
-        .gen{
-            flex-direction: row;
-        }
-        .gen label{
-            font-size: medium;
+        .gen .gen-elm{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
         }
         .container{
             min-height: 100vh;
@@ -46,11 +44,16 @@
             box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
             background-color: aqua;
             min-width: 250px;
+            border-radius: 20px;
         }
         .container form h2{
             margin-bottom: 10px;
+            text-align: center;
             box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
             background-color: aquamarine;
+            color: whitesmoke;
+            font-weight: bolder;
+            font-variant: small-caps;
         }
         .btn{
             margin-bottom: 10px;
@@ -61,7 +64,9 @@
         .btn input{
             padding: 5px;
             box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-            background: rgb(11, 94, 216);
+            /* background: rgb(11, 94, 216); */
+            background: rgb(62,166,255);
+            color: aliceblue;
             border: none;
             width: 5rem;
             height: 2rem;
@@ -78,24 +83,30 @@
             <h2>Login Details</h2>
             <div class="elm">
                 <label for="fname">First Name:</label>
-                <input type="text" name="name" id="fname" placeholder="Enter name">
+                <input type="text" name="name" id="fname" placeholder="Enter First Name">
             </div>
             <div class="elm">
                 <label for="lname">Last Name:</label>
-                <input type="text" name="name" id="lname">
+                <input type="text" name="name" id="lname" placeholder="Enter Last Name">
             </div>
             <div class="elm">
                 <label for="num"> Number:</label>
-                <input type="number" name="number" id="num">
+                <input type="number" name="number" id="num" placeholder="Enter Mobile Number">
             </div>
             <div class="elm gen">
-                <label for="gender"> Age:</label>
-                <input type="radio" name="name" id="gender">Male
-                <input type="radio" name="name" id="gender">Female
+                <label for="gender"> Gender:</label>
+                <div class="gen-elm">
+                    <div>
+                        <input type="radio" name="name" id="gender" >Male
+                    </div>
+                    <div>
+                        <input type="radio" name="name" id="gender" >Female
+                    </div>
+                </div>
             </div>
             <div class="btn">
-                <input type="button" value="submit">
-                <input type="button" value="reset">
+                <input type="button" value="Submit">
+                <input type="button" value="Reset">
             </div>
         </form>
     </div>
