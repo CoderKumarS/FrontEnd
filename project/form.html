@@ -6,8 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form</title>
     <style>
+        *{
+            box-sizing: border-box;
+        }
         body {
-            background-color: greenyellow;
+            height: 100vh;
+            background-color: rgb(232, 224, 224);
         }
 
         .container {
@@ -18,7 +22,7 @@
         }
 
         .text {
-            margin-bottom: 10px;
+            margin: 25px 0;
             font-weight: bold;
             font-size: 25px;
         }
@@ -33,8 +37,12 @@
             display: flex;
             align-items: center;
             justify-content: space-evenly;
-            background-color: green;
+            background-color: rgba(255, 255, 255, 0.2);
             width: 25em;
+            border-radius: 15px;
+            background: #e0e0e0;
+            box-shadow: 17px 17px 33px #b8b8b8,
+                -17px -17px 33px #ffffff;
         }
 
         .form form .inputs {
@@ -55,19 +63,42 @@
             grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
         }
 
-        .form form .inputs .input input {
-            margin-left: 1px;
+        .form form .inputs .input input, .form form .inputs .input textarea,.form form .inputs .input select {
+            border: none;
+            border: 1px solid black;
+            outline: none;
+            border-radius: 3px;
+            background: #e0e0e0;
+            padding: 4px;
+        }
+
+        .form form .inputs .input input::placeholder {
+            padding: 10px;
         }
 
         .form form .inputs .btn {
             display: flex;
             align-items: center;
             justify-content: space-around;
-            margin-top: 10px;
+            margin-top: 35px;
+        }
+
+        .form form .inputs .btn input {
+            border: none;
+            padding: 5px 50px;
+            border-radius: 18px;
+            background-image: linear-gradient(145deg, #51bb56, #449e48);
         }
 
         .form form .inputs .check {
             justify-content: flex-start;
+        }
+
+        .form form .inputs .check input {
+            box-shadow: none;
+        }
+        #file{
+            border: none;
         }
     </style>
 </head>
@@ -89,6 +120,14 @@
                         <input type="text" name="name" id="lname" placeholder="Last name">
                     </div>
                     <div class="input">
+                        <label for="age">Age </label>
+                        <input type="number" name="age" id="age" placeholder="Age (5 - 80)" min="5" max="80">
+                    </div>
+                    <div class="input">
+                        <label for="dob">Date of Birth </label>
+                        <input type="date" name="dob" id="dob">
+                    </div>
+                    <div class="input">
                         <label for="gen">Gender </label>
                         <div class="gen">
                             <input type="radio" name="name" id="gen">Male
@@ -104,6 +143,7 @@
                             <option value="Delhi">Delhi</option>
                             <option value="Ranchi">Ranchi</option>
                             <option value="Phagwara">Phagwara</option>
+                            <option value="" selected>Select your city</option>
                         </select>
                     </div>
                     <div class="input address">
