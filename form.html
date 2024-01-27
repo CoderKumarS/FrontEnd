@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Login-Form</title>
     <style>
         *{
             margin: 0;
@@ -22,8 +22,16 @@
         .elm input{
             margin: 0 10px 10px;
             padding: 5px;
-            background: rgba(255, 255, 255, 0.1);
+            background: rgba(255, 255, 255, 0.5);
             border: none;
+            border-radius: 5px;
+            outline: none;
+        }
+        .elm input:hover{
+            outline: 1px solid black;
+        }
+        .elm input::placeholder{
+            color: rgba(0, 0, 0, 0.331);
         }
         .elm label{
             margin-left: 10px;
@@ -72,7 +80,13 @@
             height: 2rem;
             font-size: large;
             border-radius: 20px;
-            font-weight: ;
+            font-weight: 400;
+        }
+        .btn input:hover{
+            width: 4.8rem;
+            height: 1.9rem;
+            color: rgb(62,166,255);
+            background-color: aliceblue;
         }
     </style>
 </head>

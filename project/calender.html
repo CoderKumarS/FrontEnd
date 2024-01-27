@@ -17,6 +17,7 @@
             scroll-snap-type: y mandatory;
             overflow-y: scroll;
             height: 100vh;
+            scroll-behavior: smooth;
         }
 
         .sujal .months {
@@ -33,6 +34,15 @@
         th {
             padding: 1vh;
             font: 1.2em sans-serif;
+            text-align: center;
+        }
+        .sujal .months table tr td:hover{
+            background-color: #40e0d0;
+            border-radius: 10px;
+        }
+        .sujal .months table tr th:hover{
+            background-color: #0047ab;
+            border-radius: 10px;
         }
 
         .sujal .months table {
@@ -82,13 +92,21 @@
         <header class="text-gray-600 body-font  sticky top-0 bg-gradient-to-r from-cyan-500 to-blue-500">
             <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
                 <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
-                    <span class="ml-3 text-xl">Calender</span>
+                    <span class="ml-2 text-xl">Calender</span>
                 </a>
                 <nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
                     <a class="mr-5 hover:text-gray-900" href="#jan">January</a>
-                    <a class="mr-5 hover:text-gray-900" href="feb">February</a>
-                    <a class="mr-5 hover:text-gray-900">Third Link</a>
-                    <a class="mr-5 hover:text-gray-900">Fourth Link</a>
+                    <a class="mr-5 hover:text-gray-900" href="#feb">February</a>
+                    <a class="mr-5 hover:text-gray-900" href="#mar">March</a>
+                    <a class="mr-5 hover:text-gray-900" href="#apr">April</a>
+                    <a class="mr-5 hover:text-gray-900" href="#may">May</a>
+                    <a class="mr-5 hover:text-gray-900" href="#jun">June</a>
+                    <a class="mr-5 hover:text-gray-900" href="#jan">July</a>
+                    <a class="mr-5 hover:text-gray-900" href="#aug">August</a>
+                    <a class="mr-5 hover:text-gray-900" href="#sep">September</a>
+                    <a class="mr-5 hover:text-gray-900" href="#oct">October</a>
+                    <a class="mr-5 hover:text-gray-900" href="#nov">November</a>
+                    <a class="mr-5 hover:text-gray-900" href="#dec">December</a>
                 </nav>
             </div>
         </header>
