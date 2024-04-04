@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hide</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div class="button">
+        <button type="button" id="hideButton">Hide</button>
+        <button type="button" id="showButton">Show</button>
+        <button type="button" id="toggle">Toggle</button>
+    </div>
+    <div id="elementToHide">
+        <img id="img" src="https://picsum.photos/seed/picsum/200/300" alt="image">
+    </div>
+    <script type="text/javascript" language="javascript">
+        $(document).ready(function() {
+            $("#hideButton").click(()=>{
+                $("#elementToHide").hide();
+            });
+            $("#showButton").click(()=>{
+                $("#elementToHide").show();
+            });
+            $("#toggle").click(()=>{
+                $("#elementToHide").toggle("slow");
+            });
+            $("body").css({"display":"flex", "align-items":"center","height":"100vh","flex-direction":"column","background-color":"#f3f4f6"});
+            $("button").css({"padding": "10px 20px","margin": "10px 20px","border-radius": "10px","border": "2px solid #49eaea","color": "white","background-color": "cyan"});
+            $("img").css({"border-radius":"8px","box-shadow":"0 0 10px 0 #49eaea","margin":"20px 0px","border":"2px solid #49eaea"});
+        });
+    </script>
+</body>
+</html>

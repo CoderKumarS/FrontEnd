@@ -16,10 +16,32 @@
             $("#b3").click(function(){
                 $("h3").html("<img src='https://images.unsplash.com/photo-1682686581740-2c5f76eb86d1?q=80&w=871&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' height='200' width='500'>");
             });
+            $("#h1").css("transition", "all 2s ease");
+            $("#h1").css("height", "fit-content");
+            $("#h1").css("width", "fit-content");
+            $("#h1").css("border", "1px solid black");
+            $("#h1").css("display", "inline-block");
+            $("#div").css("display","block")
+            $("#div").css("height","200px")
+            $("#div").mouseenter(function(){
+                $("#h1").css("height", "200px");
+                $("#h1").css("width", "200px");
+                $("#h1").css("color", "red");
+                $("#h1").css("background-color", "blue");
+            });
+            $("#div").mouseleave(function(){
+                $("#h1").css("height", "fit-content");
+                $("#h1").css("width", "fit-content");
+                $("#h1").css("color", "pink");
+                $("#h1").css("background-color", "green");
+            });
         });
     </script>
 </head>
 <body>
+    <div id="div">
+        <h1 id="h1">page</h1>
+    </div>
     <h1>????????? ????????? ????????????</h1>
     <h2>@@@@@@@@@@@</h2>
     <h3>%%%%%%%%%%%%%%%%%%</h3>
