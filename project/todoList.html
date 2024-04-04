@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body class="w-screen h-screen flex items-center justify-center flex-col ">
+    <div
+        class="container flex items-center justify-center w-80 flex-col border-solid border-2 border-sky-500 p-2 rounded">
+        <h1 class="text-2xl">To-Do List</h1>
+        <form id="todo-form" class="flex flex-col my-2 w-70">
+            <label for="topic">Enter: </label>
+            <input type="text" name="topic" id="topic" placeholder="Enter a task"
+                class="border-solid border-2 border-blue-300 rounded focus:border-blue-400 hover:border-blue-500 px-2 w-60">
+            <input type="submit" class="text-white bg-sky-500/100 hover:bg-cyan-600 rounded mt-2" value="Add">
+        </form>
+    </div>
+    <div class="m-1 w-fit border-solid border-2 border-sky-500 rounded">
+        <ul id="list" class="flex flex-col w-90">
+            <li class="w-80 text-center">Tasks:</li>
+        </ul>
+    </div>
+    <script>
+        $(document).ready(function () {
+            function addList(item) {
+                $('#list').append(`<li class ="border-solid border-2 border-blue-200 rounded m-1 p-2 flex justify-between hover:bg-sky-200"><input type="checkbox" class="hidden">${item}<button class="delete-btn bg-red-500/100  hover:bg-red-700 rounded  px-2">Delete</button></li>`)
+            }
+            $('#todo-form').submit(function (e) {
+                e.preventDefault();
+                var input = $('#topic').val();
+                if (input.trim() !== '') {
+                    addList(input);
+                    $('#topic').val('');
+                }
+            });
+            $(document).on('click', '.delete-btn', function () {
+                $(this).parent().remove();
+            });
+        })
+    </script>
+
+</body>
+
+</html>
